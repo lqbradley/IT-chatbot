@@ -2,25 +2,25 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const fs = require('fs');
+const path = require('path');
+
 const app = express();
 const server = http.createServer(app);
-const path = require('path');
 const io = socketIo(server, {
     cors: {
-        origin: "*", 
+        origin: "*", // Allow all origins for testing, change to your specific domain in production
         methods: ["GET", "POST"]
     }
 });
 
-io.sockets.setMaxListeners(20)
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
+// Logging middleware to debug requests
 app.use((req, res, next) => {
     console.log(`Received request for ${req.url}`);
     next();
 });
-
-// Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // API route to handle other requests (for future API endpoints)
 app.get('/api', (req, res) => {
@@ -31,8 +31,6 @@ app.get('/api', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
-
-
 
 let intents = {};
 fs.readFile('intents.json', 'utf8', (err, data) => {
