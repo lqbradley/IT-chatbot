@@ -7,11 +7,18 @@ const server = http.createServer(app);
 const path = require('path');
 const io = socketIo(server, {
     cors: {
-        origin: "https://restaurantchatbot.azurewebsites.net", 
+        origin: "*", 
         methods: ["GET", "POST"]
     }
 });
+
 io.sockets.setMaxListeners(20)
+
+app.use((req, res, next) => {
+    console.log(`Received request for ${req.url}`);
+    next();
+});
+
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
@@ -25,10 +32,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
-app.use((req, res, next) => {
-    console.log(`Received request for ${req.url}`);
-    next();
-});
+
 
 let intents = {};
 fs.readFile('intents.json', 'utf8', (err, data) => {
@@ -51,7 +55,9 @@ io.on('connection', (socket) => {
     });
 
     socket.on('userMessage', (data) => {
+        console.log(`Received message from ${userId}: ${data.message}`);
         const response = determineResponse(data.message, userId);
+        console.log(`Sending response to ${userId}: ${response}`);
         socket.emit('message', { userId, type: 'bot', name: 'System', text: response });
     });
 });

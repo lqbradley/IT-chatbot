@@ -5,7 +5,8 @@ import './chat.css';
 import { debounce } from 'lodash';
 import { FaPaperPlane } from 'react-icons/fa';
 
-const socket = io('http://localhost:4000');
+const socket = io('https://restaurantchatbot.azurewebsites.net');
+
 
 function Chat() {
     const [message, setMessage] = useState('');
