@@ -1,0 +1,217 @@
+/* Chat.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: auto;
+    position: relative;
+}
+
+.chat-container {
+    width: 100%;
+    height: 100%; 
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;  /* Ensure chat container is scrollable */
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.chat-container:hover {
+    background-color: #f5f5f5;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure header spans full width */
+    margin-bottom: 5px;
+}
+
+.message.user {
+    align-items: flex-end; /* Align user messages to the right */
+}
+
+.message.user .message-header {
+    align-self: flex-end; /* Align the header of the user message to the right */
+    text-align: right;
+}
+
+.message.bot .message-header {
+    align-self: flex-start; /* Align the header of the bot message to the left */
+    text-align: left;
+}
+
+.message.bot {
+    align-items: flex-start; /* Align bot messages to the left */
+}
+
+.message .text {
+    background-color: #e9ecef;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(233, 236, 239, 0.4);
+}
+
+.message.user .text {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end; /* Align user message text to the right */
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4);
+}
+
+.message.bot .text {
+    background-color: #e9ecef;
+    color: black;
+    align-self: flex-start; /* Align bot message text to the left */
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(233, 236, 239, 0.4);
+}
+
+.message .text strong {
+    display: inline; /* Display name inline */
+    font-size: 0.85em;
+    margin-right: 10px; 
+}
+
+.message .text small {
+    display: inline; /* Display timestamp inline */
+    font-size: 0.75em;
+    color: #666;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .chat-wrapper {
+        height: 80vh;
+        padding: 10px;
+    }
+
+    .input-group {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .input-group input {
+        padding: 5px;
+        border-radius: 10px;
+        margin-right: 5px;
+    }
+
+    .input-group button {
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-wrapper {
+        height: 70vh;
+        padding: 5px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .input-group input {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .input-group button {
+        width: 100%;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,303 @@
+{
+    "italian": {
+        "restaurants": [
+            {
+                "name": "Il Pozzo",
+                "price_range": "under 10 € per person",
+                "location": "City Center",
+                "rating": "3.5 stars",
+                "opening_hours": "10 AM - 10 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-1111) or visit www.ilpozzo.com",
+                "contact_details": "Phone: 555-1111, Email: contact@ilpozzo.com"
+            },
+            {
+                "name": "Restaurant San Siro",
+                "price_range": "10-20 € per person",
+                "location": "City Center",
+                "rating": "4.6 stars",
+                "opening_hours": "12 PM - 12 AM",
+                "parking": "Available",
+                "reservation_method": "Call (555-2222)",
+                "contact_details": "Phone: 555-2222, Email: reserve@restaurantsansiro.com"
+            },
+            {
+                "name": "Restaurant La Cantina di Simon",
+                "price_range": "10-20 € per person",
+                "location": "Midtown",
+                "rating": "4.1 stars",
+                "opening_hours": "5 PM - 11 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-3333) or visit www.lacantinadisimon.com",
+                "contact_details": "Phone: 555-3333, Email: contact@lacantinadisimon.com"
+            },
+            {
+                "name": "Pizzeria La Fontana",
+                "price_range": "10-20 € per person",
+                "location": "West Side",
+                "rating": "4.2 stars",
+                "opening_hours": "4 PM - 10 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-4444) or visit www.pizzerialafontana.com",
+                "contact_details": "Phone: 555-4444, Email: info@pizzerialafontana.com"
+            }
+        ]
+    },
+
+
+    "chinese": {
+        "restaurants": [
+            {
+                "name": "Panda Restaurant",
+                "price_range": "under 10 € per person",
+                "location": "North side",
+                "rating": "3.9 stars",
+                "opening_hours": "11 AM - 9 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-1234) or message WhatsApp: 123478910",
+                "contact_details": "Phone: 555-1234, Email: reserve@pandarestaurant.com"
+            },
+            {
+                "name": "Sichuan Hotpot",
+                "price_range": "10-20 € per person",
+                "location": "City Center",
+                "rating": "4.5 stars",
+                "opening_hours": "11 AM - 10 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-5678) or visit www.sichuanhotpot.com",
+                "contact_details": "Phone: 555-5678, Email: contact@sichuanhotpot.com"
+            },
+            {
+                "name": "Cantonese Dim Sum",
+                "price_range": "20-30 € per person",
+                "location": "South of city",
+                "rating": "4.2 stars",
+                "opening_hours": "12 PM - 10:30 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-9876) or visit www.cantonesedimsum.com",
+                "contact_details": "Phone: 555-9876, Email: contact@cantonesedimsum.com"
+            },
+            {
+                "name": "Lanzhou Beef Noodles",
+                "price_range": "10-20 € per person",
+                "location": "East Side",
+                "rating": "4.2 stars",
+                "opening_hours": "11 AM - 9:30 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-6543) or visit www.lanzhounoodles.com",
+                "contact_details": "Phone: 555-6543, Email: info@lanzhounoodles.com"
+            }
+        ]
+    },
+
+    "mexican": {
+        "restaurants": [
+            {
+                "name": "Mezzeria Milo",
+                "price_range": "20-30 € per person",
+                "location": "West Side",
+                "rating": "4.2 stars",
+                "opening_hours": "12 PM - 1 AM",
+                "parking": "Available",
+                "reservation_method": "Call (555-6666) or visit www.mezzeriamilo.com or message WhatsApp:66666666",
+                "contact_details": "Phone: 555-1111, Email: reserve@mezzeriamilo.com"
+            },
+            {
+                "name": "Taco Mexico",
+                "price_range": "10-20 € per person",
+                "location": "City Center",
+                "rating": "3.7 stars",
+                "opening_hours": "4 PM - 11 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-8888) or visit www.tacomexico.com",
+                "contact_details": "Phone: 555-8888, Email: reserve@tacomexico.com"
+            },
+            {
+                "name": "Restaurant Ritos",
+                "price_range": "20-30 € per person",
+                "location": "Midtown",
+                "rating": "4.2 stars",
+                "opening_hours": "11:30 AM - 9:30 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-9999) or visit www.ritosnew.com",
+                "contact_details": "Phone: 555-3333, Email: contact@ritosnew.com"
+            }
+        ]
+    },
+    "indian": {
+        "restaurants": [
+            {
+                "name": "Holi Indian",
+                "price_range": "10 - 20 € per person",
+                "location": "Upper Town",
+                "rating": "4.6 stars",
+                "opening_hours": "4 PM - 11 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-0496) or visit www.holiindian.com",
+                "contact_details": "Phone: 555-0496, Email: contact@holiindian.com"
+            },
+            {
+                "name": "Indian Food Corner",
+                "price_range": "Under 10 € per person",
+                "location": "City Center",
+                "rating": "4.1 stars",
+                "opening_hours": "3 PM - 9 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-2827) for food delivery and seat reservation",
+                "contact_details": "Phone: 555-2827, Email: info@indianfoodcorner.com"
+            },
+            {
+                "name": "Restaurant Namaska",
+                "price_range": "20-30 € per person",
+                "location": "Midtown",
+                "rating": "3.9 stars",
+                "opening_hours": "4:30 PM - 11 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-3987) or visit www.restaurantnamaska.com",
+                "contact_details": "Phone: 555-3987, Email: reserve@restaurantnamaska.com"
+            },
+            {
+                "name": "Taj Mahal",
+                "price_range": "10-20 € per person",
+                "location": "East Side",
+                "rating": "4.7 stars",
+                "opening_hours": "5 PM - 10 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-3456) or visit www.tajmahal.com",
+                "contact_details": "Phone: 555-3456, Email: contact@tajmahal.com"
+            }
+        ]
+    },
+    "japanese": {
+        "restaurants": [
+            {
+                "name": "Restaurant Kyushu",
+                "price_range": "20 - 30 € per person",
+                "location": "Middle Town",
+                "rating": "4.5 stars",
+                "opening_hours": "1 PM - 10 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-9999) or visit www.kyushusushi.com",
+                "contact_details": "Phone: 555-9999, Email: contact@kyushusushi.com"
+            },
+            {
+                "name": "Umami Asian Food Bar",
+                "price_range": "Under 10 € per person",
+                "location": "City Center",
+                "rating": "4.4 stars",
+                "opening_hours": "12 PM - 11:30 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-4747) for food delivery and no seat reservation required",
+                "contact_details": "Phone: 555-4747, Email: info@umamifood.com"
+            },
+            {
+                "name": "Suzi",
+                "price_range": "30-40 € per person",
+                "location": "Midtown",
+                "rating": "3.7 stars",
+                "opening_hours": "11 AM - 10 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-0123) or visit www.suzijapan.com",
+                "contact_details": "Phone: 555-0123, Email: reserve@suzijapan.com"
+            },
+            {
+                "name": "Sushi Koi",
+                "price_range": "10-20 € per person",
+                "location": "West Side",
+                "rating": "4.4 stars",
+                "opening_hours": "12 PM - 10:30 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-5858) or visit www.sushikoi.com",
+                "contact_details": "Phone: 555-5858, Email: contact@sushikoi.com"
+            }
+        ]
+    },
+    "french": {
+        "restaurants": [
+            {
+                "name": "Le Bibelot",
+                "price_range": "20 - 30 € per person",
+                "location": "Upper Town",
+                "rating": "4.3 stars",
+                "opening_hours": "5 PM - 10 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-6263) or visit www.lebibelot.com",
+                "contact_details": "Phone: 555-6263, Email: contact@lebibelot.com"
+            },
+            {
+                "name": "Oudaen",
+                "price_range": "20-30 € per person",
+                "location": "City Center",
+                "rating": "4.2 stars",
+                "opening_hours": "11 AM - 10:30 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-8789) or visit www.oudaenfrench.com",
+                "contact_details": "Phone: 555-8789, Email: info@oudaenfrench.com"
+            },
+            {
+                "name": "La French Cafe",
+                "price_range": "10-20 € per person",
+                "location": "Midtown",
+                "rating": "4.5 stars",
+                "opening_hours": "10 AM - 11 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-9695) or visit www.lafrenchcafe.com",
+                "contact_details": "Phone: 555-9695, Email: reserve@lafrenchcafe.com"
+            },
+            {
+                "name": "Brasserie Goeie Louisa",
+                "price_range": "20-30 € per person",
+                "location": "West Side",
+                "rating": "4.1 stars",
+                "opening_hours": "9 AM - 12 AM",
+                "parking": " Available",
+                "reservation_method": "Call (555-8183) or visit www.goeielouisa.com",
+                "contact_details": "Phone: 555-8183, Email: contact@goeielouisa.com"
+            },
+            {
+                "name": "Le Jardin",
+                "price_range": "50-100 € per person",
+                "location": "South Side",
+                "rating": "4.4 stars",
+                "opening_hours": "12 PM - 3 PM & 5 PM - 12 AM",
+                "parking": " Available",
+                "reservation_method": "Call (555-7479) or visit www.lejardin.com",
+                "contact_details": "Phone: 555-7479, Email: contact@lejardin.com"
+            }
+        ]
+    },
+    "fast food": {
+        "restaurants": [
+            {
+                "name": "New York Hamburger",
+                "price_range": "10 - 20 € per person",
+                "location": "City Center",
+                "rating": "3.5 stars",
+                "opening_hours": "10 AM - 9:30 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-1317) or visit www.newyorkhamburger.com",
+                "contact_details": "Phone: 555-1317, Email: contact@newyorkhamburger.com"
+            },
+            {
+                "name": "New Burger Bar",
+                "price_range": "Under 10 € per person",
+                "location": "City Center",
+                "rating": "4.1 stars",
+                "opening_hours": "10 AM - 11:30 PM",
+                "parking": "Not Available",
+                "reservation_method": "Call (555-2824) for food delivery and no seat reservation required",
+                "contact_details": "Phone: 555-2824, WhatsApp:54321098"
+            },
+            {
+                "name": "Burger Masters",
+                "price_range": "10-20 € per person",
+                "location": "South Side",
+                "rating": "3.9 stars",
+                "opening_hours": "11 AM - 10:30 PM",
+                "parking": "Available",
+                "reservation_method": "Call (555-7971) or visit www.burgermasters.com",
+                "contact_details": "Phone: 555-7971, Email: reserve@burgermasters.com"
+            }
+        ]
+    }
+}

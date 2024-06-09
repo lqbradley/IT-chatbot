@@ -1,0 +1,23 @@
+.message {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.user .user-text {
+    background-color: #dcf8c6; /* light green */
+    text-align: left;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.message.bot .bot-text {
+    background-color: #fff; /* white */
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: left;
+}
