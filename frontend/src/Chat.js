@@ -11,10 +11,10 @@ function Chat() {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([]);
     const [isTyping, setIsTyping] = useState(false);
-    const [loadingHistory, setLoadingHistory] = useState(false);
+/*    const [loadingHistory, setLoadingHistory] = useState(false);*/
     const chatContainerRef = useRef(null);
     const isUserScrolling = useRef(false);
-    const oldestMessageTimestamp = useRef(null);
+/*   const oldestMessageTimestamp = useRef(null); */
 
     useEffect(() => {
         socket.on('message', data => {
