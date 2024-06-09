@@ -1,5 +1,5 @@
 {
-  "name": "Restaurantchatbot",
+  "name": "restaurantchatbot",
   "version": "1.0.0",
   "description": "A Node.js server for a restaurant suggestion chatbot using Socket.IO",
   "main": "backend/server.js",
@@ -116,9 +116,6 @@
     "yargs-parser": "^21.1.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC"
 }
