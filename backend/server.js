@@ -63,7 +63,7 @@ io.on('connection', (socket) => {
 function determineResponse(message, userId) {
     const session = userSessions[userId];
     const words = message.toLowerCase().split(/\s+/);
-    let response = "I'm sorry, I didn't understand that. Could you please repeat?";
+    let response = ""; // Initialize as an empty string
     let understood = false;
 
     if (session.stage === 0) {
@@ -81,7 +81,7 @@ function determineResponse(message, userId) {
             response = "Please tell me which cuisine you are interested in.";
         }
     } else if (session.stage === 1) {
-        if (message.includes("go back")||message.includes("main menu")||message.includes("new cuisine")||message.includes("last step")) {
+        if (message.includes("go back") || message.includes("main menu") || message.includes("new cuisine") || message.includes("last step")) {
             session.stage = 0;
             response = "Okay, let's start over. Which cuisine would you like to have?";
             understood = true;
@@ -137,11 +137,14 @@ function determineResponse(message, userId) {
             if (message.includes("nothing else") || message.includes("satisfied")) {
                 session.stage = 3;
                 session.failCount = 0;
-                response = `Great! If you're satisfied with ${session.restaurants.map(r => r.name).join(", ")}, I can provide you with reservation methods and contact details. Would you like that?`;
+                response += `Great! If you're satisfied with ${session.restaurants.map(r => r.name).join(", ")}, I can provide you with reservation methods and contact details. Would you like that?`;
                 understood = true;
-            } else if (!understood) {
-                response = "I'm sorry, I didn't understand that. Please ask about price range, location, rating, opening hours, parking, or say 'go back to restaurants' or 'go back to cuisines'.";
             }
+        }
+
+        // If no understood response was formed, provide the default message
+        if (!understood) {
+            response += "I'm sorry, I didn't understand that. Please ask about price range, location, rating, opening hours, parking, or say 'go back to restaurants' or 'go back to cuisines'.";
         }
     } else if (session.stage === 3) {
         if (message.includes("yes") || message.includes("please")) {
@@ -195,6 +198,7 @@ function determineResponse(message, userId) {
 
     return response;
 }
+
 
 const port = process.env.PORT || 4000;
 server.listen(port, () => console.log(`Listening on port ${port}`));
