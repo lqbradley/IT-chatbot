@@ -4,11 +4,30 @@ const socketIo = require('socket.io');
 const fs = require('fs');
 const app = express();
 const server = http.createServer(app);
+const path = require('path');
 const io = socketIo(server, {
     cors: {
         origin: "https://restaurantchatbot.azurewebsites.net", 
         methods: ["GET", "POST"]
     }
+});
+io.sockets.setMaxListeners(20)
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// API route to handle other requests (for future API endpoints)
+app.get('/api', (req, res) => {
+    res.send('API is running...');
+});
+
+// All other GET requests not handled before will return the React app
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
+app.use((req, res, next) => {
+    console.log(`Received request for ${req.url}`);
+    next();
 });
 
 let intents = {};
@@ -28,6 +47,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${userId}`);
         delete userSessions[userId];
+        socket.removeAllListeners(); 
     });
 
     socket.on('userMessage', (data) => {
