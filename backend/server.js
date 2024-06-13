@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
     const userId = socket.id;
     console.log(`New client connected: ${userId}`);
     userSessions[userId] = { stage: 0, failCount: 0 };
-    socket.emit('message', { userId, type: 'bot', name: 'System', text: "Welcome! I am a restaurant suggestion bot. I can give you advice and information about restaurants in town. Firstly, which cuisine would you like to have? Currently, we have Italian, Chinese, Mexican, Japanese, Indian, or Fast Food available for search." });
+    socket.emit('message', { userId, type: 'bot', name: 'System', text: "Welcome! I am a restaurant suggestion bot. I can give you advice and information about restaurants in town. Firstly, which cuisine would you like to have? Currently, we have Italian, Chinese, Mexican, Japanese, Indian, or American available for search." });
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${userId}`);
@@ -83,7 +83,7 @@ function determineResponse(message, userId) {
     } else if (session.stage === 1) {
         if (message.includes("go back") || message.includes("main menu") || message.includes("new cuisine") || message.includes("last step")) {
             session.stage = 0;
-            response = "Okay, let's start over. Which cuisine would you like to have?  Currently, we have Italian, Chinese, Mexican, Japanese, Indian, or Fast Food available for search.";
+            response = "Okay, let's start over. Which cuisine would you like to have?  Currently, we have Italian, Chinese, Mexican, Japanese, Indian, or American available for search.";
             understood = true;
         } else {
             const selectedRestaurants = [];
@@ -104,14 +104,14 @@ function determineResponse(message, userId) {
             }
         }
     } else if (session.stage === 2) {
-        if (message.includes("go back to restaurants") || message.includes("restaurants")|| message.includes("restaurant")|| message.includes("other restaurant")|| message.includes("new one")|| message.includes("go back")) {
+        if (message.includes("go back to restaurants") || message.includes("restaurants")|| message.includes("restaurant")|| message.includes("other restaurant")) {
             session.stage = 1;
             const restaurantNames = session.cuisines.map(cuisine => 
                 intents[cuisine].restaurants.map(r => r.name).join(", ")
             ).join(" | ");
             response = `Okay, let's go back. There are several restaurants in the selected cuisines: ${restaurantNames}. Which one would you like to know more about?`;
             understood = true;
-        } else if (message.includes("go back to cuisines") || message.includes("main menu") || message.includes("another cuisine")|| message.includes("new cuisine")) {
+        } else if (message.includes("go back to cuisines") || message.includes("main menu") || message.includes("another cuisine")|| message.includes("new cuisine")|| message.includes("new one")|| message.includes("go back")) {
             session.stage = 0;
             response = "Okay, let's go back. Which cuisine would you like to have?";
             understood = true;
@@ -134,7 +134,7 @@ function determineResponse(message, userId) {
                     understood = true;
                 }
             });
-            if (message.includes("nothing else") || message.includes("satisfied")|| message.includes("OK")|| message.includes("good")|| message.includes("great")) {
+            if (message.includes("nothing else") || message.includes("satisfied")|| message.includes("OK")|| message.includes("good")|| message.includes("great")|| message.includes("ok")) {
                 session.stage = 3;
                 session.failCount = 0;
                 response += `Great! If you're satisfied with ${session.restaurants.map(r => r.name).join(", ")}, I can assist you with making a reservation. Would you like to proceed with a reservation? If no, please enter main menu to go back to reselect cuisine.`;
@@ -147,12 +147,12 @@ function determineResponse(message, userId) {
             response += "I'm sorry, I didn't understand that. Please ask about price range, location, rating, opening hours, parking, or say 'go back to restaurants' or 'go back to cuisines'.";
         }
     } else if (session.stage === 3) {
-        if (message.includes("yes") || message.includes("please")) {
+        if (message.includes("yes") || message.includes("please")||message.includes("Yes")||message.includes("okay")||message.includes("OK")||message.includes("ok")) {
             session.stage = 4;
             session.failCount = 0;
             response = "Excellent! How many people is the reservation for? please enter 0-20 number. If you want to go back, please enter main menu to reselect cuisine";
             understood = true;
-        } else if (message.includes("go back to cuisines") || message.includes("main menu") || message.includes("another cuisine")) {
+        } else if (message.includes("go back to cuisines") || message.includes("main menu") || message.includes("another cuisine")||message.includes("go back")) {
             session.stage = 0;
             response = "Okay, let's go back. Which cuisine would you like to have?";
             understood = true;
@@ -164,7 +164,7 @@ function determineResponse(message, userId) {
         if (!isNaN(people) && people > 0) {
             session.reservation = { people };
             session.stage = 5;
-            response = "Great! What time would you like to make the reservation for? Please enter the time in 00:00 format.";
+            response = "Great! What time today would you like to make the reservation for? Please enter the time in 00:00 format.";
             understood = true;
         } else {
             response = "Please specify a valid number of people for the reservation.";
@@ -180,7 +180,7 @@ function determineResponse(message, userId) {
         }
     } else if (session.stage === 6) {
         session.reservation.allergies = message;
-        response = `Excellent! Your reservation information is stored. Details:\nNumber of people: ${session.reservation.people}\nTime: ${session.reservation.time}\nAllergies: ${session.reservation.allergies}`;
+        response = `Excellent! Your reservation information is stored. Details:\nNumber of people: ${session.reservation.people}\nTime: ${session.reservation.time}\nAllergies: ${session.reservation.allergies}. We will send the information to the restaurant to see if they can confirm your reservation.`;
 
         // Save the reservation to a file
         fs.writeFile('reservations.json', JSON.stringify(session.reservation, null, 2), (err) => {
@@ -191,7 +191,7 @@ function determineResponse(message, userId) {
             }
         });
 
-        session.stage = 0; // Reset session stage after reservation
+        session.stage = 7; 
         understood = true;
     } else if (session.stage === 7) {
         if (message.includes("thank you") || message.includes("great") || message.includes("good") || message.includes("thanks")) {
