@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
     const userId = socket.id;
     console.log(`New client connected: ${userId}`);
     userSessions[userId] = { stage: 0, failCount: 0 };
-    socket.emit('message', { userId, type: 'bot', name: 'System', text: 'Welcome! I am a restaurant suggestion bot. I can give you advice and information about restaurants in town. Firstly, which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, or Fast Food). During using this chatbot, you can enter "main menu" at any step to back to cuisine selection step.' });
+    socket.emit('message', { userId, type: 'bot', name: 'System', text: 'Welcome! I am a restaurant suggestion bot. I can give you advice and information about restaurants in town. Firstly, which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, or American). During using this chatbot, you can enter "main menu" at any step to back to cuisine selection step.' });
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${userId}`);
@@ -183,7 +183,7 @@ function determineResponse(message, userId) {
             }
         });
 
-        session.stage = 0; // Reset session stage after reservation
+        session.stage = 7; 
         understood = true;
     } else if (session.stage === 7) {
         if (lowerCaseMessage.includes("thank you") || lowerCaseMessage.includes("great") || lowerCaseMessage.includes("good") || lowerCaseMessage.includes("thanks")|| lowerCaseMessage.includes("ok")) {
