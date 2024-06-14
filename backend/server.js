@@ -190,7 +190,7 @@ function determineResponse(message, userId) {
         session.stage = 8; 
         understood = true;
     } else if (session.stage === 8) {
-        if (lowerCaseMessage.includes("thank you") || lowerCaseMessage.includes("great") || lowerCaseMessage.includes("good") || lowerCaseMessage.includes("thanks")|| lowerCaseMessage.includes("ok")) {
+        if (lowerCaseMessage.includes("yes") || lowerCaseMessage.includes("great") || lowerCaseMessage.includes("good") || lowerCaseMessage.includes("please")|| lowerCaseMessage.includes("ok")) {
             session.stage = 0;
             response = 'Your reservation request have been sent to the selected restaurant, want else do you want to know? Or enter "main menu" to quit current session.';
             understood = true;
