@@ -172,8 +172,12 @@ function determineResponse(message, userId) {
         }
     } else if (session.stage === 6) {
         session.reservation.allergies = lowerCaseMessage;
-        response = `Excellent! Your reservation information is stored. Details:\nNumber of people: ${session.reservation.people}\nTime: ${session.reservation.time}\nAllergies: ${session.reservation.allergies} if you want to preceed to reservation request to the selected restaurant, please enter "ok". For any alternation, please use "go back" to back to last step.`;
-
+        session.stage = 7;
+        response = "Thank you! Can I have your name for the reservation?";
+        understood = true;
+    } else if (session.stage === 7) {
+        session.reservation.name = message;
+        response = `Excellent! Your reservation information is stored. Details:\nName: ${session.reservation.name}\nNumber of people: ${session.reservation.people}\nTime: ${session.reservation.time}\nAllergies: ${session.reservation.allergies}. Would you like to send the reservation information to selected restaurant to confirm reservation?`;
         // Save the reservation to a file
         fs.writeFile('reservations.json', JSON.stringify(session.reservation, null, 2), (err) => {
             if (err) {
@@ -183,9 +187,9 @@ function determineResponse(message, userId) {
             }
         });
 
-        session.stage = 7; 
+        session.stage = 8; 
         understood = true;
-    } else if (session.stage === 7) {
+    } else if (session.stage === 8) {
         if (lowerCaseMessage.includes("thank you") || lowerCaseMessage.includes("great") || lowerCaseMessage.includes("good") || lowerCaseMessage.includes("thanks")|| lowerCaseMessage.includes("ok")) {
             session.stage = 0;
             response = 'Your reservation request have been sent to the selected restaurant, want else do you want to know? Or enter "main menu" to quit current session.';
