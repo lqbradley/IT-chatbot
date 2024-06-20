@@ -169,7 +169,7 @@ function determineResponse(message, userId) {
         if (timeMatch) {
             const reservationTime = `${timeMatch[1]}:${timeMatch[2]}`;
 
-            const restaurant = session.restaurants[0]; // Assume only one restaurant is being dealt with
+            const restaurant = session.restaurants[0]; 
 
             if (isTimeWithinOpeningHours(reservationTime, restaurant.opening_hours)) {
                 session.reservation.time = reservationTime;
