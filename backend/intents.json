@@ -8,7 +8,7 @@
                 "rating": "3.5 stars",
                 "opening_hours": "10 AM - 10 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-1111) or visit www.ilpozzo.com",
+                "contact_method": "Call (555-1111) or visit www.ilpozzo.com",
                 "contact_details": "Phone: 555-1111, Email: contact@ilpozzo.com"
             },
             {
@@ -18,7 +18,7 @@
                 "rating": "4.6 stars",
                 "opening_hours": "12 PM - 12 AM",
                 "parking": "Available",
-                "reservation_method": "Call (555-2222)",
+                "contact_method": "Call (555-2222)",
                 "contact_details": "Phone: 555-2222, Email: reserve@restaurantsansiro.com"
             },
             {
@@ -28,7 +28,7 @@
                 "rating": "4.1 stars",
                 "opening_hours": "5 PM - 11 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-3333) or visit www.lacantinadisimon.com",
+                "contact_method": "Call (555-3333) or visit www.lacantinadisimon.com",
                 "contact_details": "Phone: 555-3333, Email: contact@lacantinadisimon.com"
             },
             {
@@ -38,7 +38,7 @@
                 "rating": "4.2 stars",
                 "opening_hours": "4 PM - 10 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-4444) or visit www.pizzerialafontana.com",
+                "contact_method": "Call (555-4444) or visit www.pizzerialafontana.com",
                 "contact_details": "Phone: 555-4444, Email: info@pizzerialafontana.com"
             }
         ]
@@ -54,7 +54,7 @@
                 "rating": "3.9 stars",
                 "opening_hours": "11 AM - 9 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-1234) or message WhatsApp: 123478910",
+                "contact_method": "Call (555-1234) or message WhatsApp: 123478910",
                 "contact_details": "Phone: 555-1234, Email: reserve@pandarestaurant.com"
             },
             {
@@ -64,7 +64,7 @@
                 "rating": "4.5 stars",
                 "opening_hours": "11 AM - 10 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-5678) or visit www.sichuanhotpot.com",
+                "contact_method": "Call (555-5678) or visit www.sichuanhotpot.com",
                 "contact_details": "Phone: 555-5678, Email: contact@sichuanhotpot.com"
             },
             {
@@ -74,7 +74,7 @@
                 "rating": "4.2 stars",
                 "opening_hours": "12 PM - 10:30 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-9876) or visit www.cantonesedimsum.com",
+                "contact_method": "Call (555-9876) or visit www.cantonesedimsum.com",
                 "contact_details": "Phone: 555-9876, Email: contact@cantonesedimsum.com"
             },
             {
@@ -84,7 +84,7 @@
                 "rating": "4.2 stars",
                 "opening_hours": "11 AM - 9:30 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-6543) or visit www.lanzhounoodles.com",
+                "contact_method": "Call (555-6543) or visit www.lanzhounoodles.com",
                 "contact_details": "Phone: 555-6543, Email: info@lanzhounoodles.com"
             }
         ]
@@ -99,7 +99,7 @@
                 "rating": "4.2 stars",
                 "opening_hours": "12 PM - 1 AM",
                 "parking": "Available",
-                "reservation_method": "Call (555-6666) or visit www.mezzeriamilo.com or message WhatsApp:66666666",
+                "contact_method": "Call (555-6666) or visit www.mezzeriamilo.com or message WhatsApp:66666666",
                 "contact_details": "Phone: 555-1111, Email: reserve@mezzeriamilo.com"
             },
             {
@@ -109,7 +109,7 @@
                 "rating": "3.7 stars",
                 "opening_hours": "4 PM - 11 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-8888) or visit www.tacomexico.com",
+                "contact_method": "Call (555-8888) or visit www.tacomexico.com",
                 "contact_details": "Phone: 555-8888, Email: reserve@tacomexico.com"
             },
             {
@@ -119,7 +119,7 @@
                 "rating": "4.2 stars",
                 "opening_hours": "11:30 AM - 9:30 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-9999) or visit www.ritosnew.com",
+                "contact_method": "Call (555-9999) or visit www.ritosnew.com",
                 "contact_details": "Phone: 555-3333, Email: contact@ritosnew.com"
             }
         ]
@@ -133,7 +133,7 @@
                 "rating": "4.6 stars",
                 "opening_hours": "4 PM - 11 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-0496) or visit www.holiindian.com",
+                "contact_method": "Call (555-0496) or visit www.holiindian.com",
                 "contact_details": "Phone: 555-0496, Email: contact@holiindian.com"
             },
             {
@@ -143,7 +143,7 @@
                 "rating": "4.1 stars",
                 "opening_hours": "3 PM - 9 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-2827) for food delivery and seat reservation",
+                "contact_method": "Call (555-2827) for food delivery and seat reservation",
                 "contact_details": "Phone: 555-2827, Email: info@indianfoodcorner.com"
             },
             {
@@ -153,7 +153,7 @@
                 "rating": "3.9 stars",
                 "opening_hours": "4:30 PM - 11 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-3987) or visit www.restaurantnamaska.com",
+                "contact_method": "Call (555-3987) or visit www.restaurantnamaska.com",
                 "contact_details": "Phone: 555-3987, Email: reserve@restaurantnamaska.com"
             },
             {
@@ -163,7 +163,7 @@
                 "rating": "4.7 stars",
                 "opening_hours": "5 PM - 10 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-3456) or visit www.tajmahal.com",
+                "contact_method": "Call (555-3456) or visit www.tajmahal.com",
                 "contact_details": "Phone: 555-3456, Email: contact@tajmahal.com"
             }
         ]
@@ -177,7 +177,7 @@
                 "rating": "4.5 stars",
                 "opening_hours": "1 PM - 10 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-9999) or visit www.kyushusushi.com",
+                "contact_method": "Call (555-9999) or visit www.kyushusushi.com",
                 "contact_details": "Phone: 555-9999, Email: contact@kyushusushi.com"
             },
             {
@@ -187,7 +187,7 @@
                 "rating": "4.4 stars",
                 "opening_hours": "12 PM - 11:30 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-4747) for food delivery and no seat reservation required",
+                "contact_method": "Call (555-4747) for food delivery and no seat reservation required",
                 "contact_details": "Phone: 555-4747, Email: info@umamifood.com"
             },
             {
@@ -197,7 +197,7 @@
                 "rating": "3.7 stars",
                 "opening_hours": "11 AM - 10 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-0123) or visit www.suzijapan.com",
+                "contact_method": "Call (555-0123) or visit www.suzijapan.com",
                 "contact_details": "Phone: 555-0123, Email: reserve@suzijapan.com"
             },
             {
@@ -207,7 +207,7 @@
                 "rating": "4.4 stars",
                 "opening_hours": "12 PM - 10:30 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-5858) or visit www.sushikoi.com",
+                "contact_method": "Call (555-5858) or visit www.sushikoi.com",
                 "contact_details": "Phone: 555-5858, Email: contact@sushikoi.com"
             }
         ]
@@ -221,7 +221,7 @@
                 "rating": "4.3 stars",
                 "opening_hours": "5 PM - 10 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-6263) or visit www.lebibelot.com",
+                "contact_method": "Call (555-6263) or visit www.lebibelot.com",
                 "contact_details": "Phone: 555-6263, Email: contact@lebibelot.com"
             },
             {
@@ -231,7 +231,7 @@
                 "rating": "4.2 stars",
                 "opening_hours": "11 AM - 10:30 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-8789) or visit www.oudaenfrench.com",
+                "contact_method": "Call (555-8789) or visit www.oudaenfrench.com",
                 "contact_details": "Phone: 555-8789, Email: info@oudaenfrench.com"
             },
             {
@@ -241,7 +241,7 @@
                 "rating": "4.5 stars",
                 "opening_hours": "10 AM - 11 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-9695) or visit www.lafrenchcafe.com",
+                "contact_method": "Call (555-9695) or visit www.lafrenchcafe.com",
                 "contact_details": "Phone: 555-9695, Email: reserve@lafrenchcafe.com"
             },
             {
@@ -251,7 +251,7 @@
                 "rating": "4.1 stars",
                 "opening_hours": "9 AM - 12 AM",
                 "parking": " Available",
-                "reservation_method": "Call (555-8183) or visit www.goeielouisa.com",
+                "contact_method": "Call (555-8183) or visit www.goeielouisa.com",
                 "contact_details": "Phone: 555-8183, Email: contact@goeielouisa.com"
             },
             {
@@ -261,7 +261,7 @@
                 "rating": "4.4 stars",
                 "opening_hours": "12 PM - 3 PM & 5 PM - 12 AM",
                 "parking": " Available",
-                "reservation_method": "Call (555-7479) or visit www.lejardin.com",
+                "contact_method": "Call (555-7479) or visit www.lejardin.com",
                 "contact_details": "Phone: 555-7479, Email: contact@lejardin.com"
             }
         ]
@@ -275,7 +275,7 @@
                 "rating": "3.5 stars",
                 "opening_hours": "10 AM - 9:30 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-1317) or visit www.newyorkhamburger.com",
+                "contact_method": "Call (555-1317) or visit www.newyorkhamburger.com",
                 "contact_details": "Phone: 555-1317, Email: contact@newyorkhamburger.com"
             },
             {
@@ -285,7 +285,7 @@
                 "rating": "4.1 stars",
                 "opening_hours": "10 AM - 11:30 PM",
                 "parking": "Not Available",
-                "reservation_method": "Call (555-2824) for food delivery and no seat reservation required",
+                "contact_method": "Call (555-2824) for food delivery and no seat reservation required",
                 "contact_details": "Phone: 555-2824, WhatsApp:54321098"
             },
             {
@@ -295,7 +295,7 @@
                 "rating": "3.9 stars",
                 "opening_hours": "11 AM - 10:30 PM",
                 "parking": "Available",
-                "reservation_method": "Call (555-7971) or visit www.burgermasters.com",
+                "contact_method": "Call (555-7971) or visit www.burgermasters.com",
                 "contact_details": "Phone: 555-7971, Email: reserve@burgermasters.com"
             }
         ]
