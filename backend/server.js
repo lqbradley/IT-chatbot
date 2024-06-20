@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
     const userId = socket.id;
     console.log(`New client connected: ${userId}`);
     userSessions[userId] = { stage: 0, failCount: 0 };
-    socket.emit('message', { userId, type: 'bot', name: 'System', text: 'Welcome! I am a restaurant suggestion bot. I can give you advice and information about restaurants in town. Firstly, which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, or American). During using this chatbot, you can enter "main menu" at any step to back to cuisine selection step.' });
+    socket.emit('message', { userId, type: 'bot', name: 'System', text: 'Welcome! I am a restaurant suggestion bot. I can give you advice and provide reservation for restaurants in town. Firstly, which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, or American). During using this chatbot, you can enter "main menu" at any step to back to cuisine selection step.' });
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${userId}`);
@@ -67,7 +67,7 @@ function determineResponse(message, userId) {
     let response = ""; // Initialize as an empty string
     let understood = false;
 
-    // Universal conditions
+    // enable go back function to the app
     if (lowerCaseMessage.includes("main menu")) {
         session.stage = 0;
         session.failCount = 0;
@@ -107,7 +107,7 @@ function determineResponse(message, userId) {
             session.restaurants = selectedRestaurants;
             session.stage = 2;
             session.failCount = 0;
-            response = `You selected ${selectedRestaurants.map(r => r.name).join(", ")}. What would you like to know about them? (price range, location, rating, opening hours, parking) Or use 'go back' to last step.`;
+            response = `You selected ${selectedRestaurants.map(r => r.name).join(", ")}. What would you like to know about them? (price range, location, rating, opening hours, parking, contact) Or use 'go back' to last step.`;
             understood = true;
         } else {
             response = "Please select a restaurant from the list or say 'go back' to choose another cuisine.";
@@ -129,9 +129,12 @@ function determineResponse(message, userId) {
             } else if (lowerCaseMessage.includes("parking")) {
                 response += `Parking for ${restaurant.name} is ${restaurant.parking}. `;
                 understood = true;
+            } else if (lowerCaseMessage.includes("contact")) {
+                response += `You can contact ${restaurant.name} via ${restaurant.contact_method}. ${restaurant.contact_details}. `;
+                understood = true;
             }
         });
-        if (lowerCaseMessage.includes("nothing else") || lowerCaseMessage.includes("satisfied")||lowerCaseMessage.includes("ok")||lowerCaseMessage.includes("good")) {
+        if (lowerCaseMessage.includes("nothing else") || lowerCaseMessage.includes("satisfied")||lowerCaseMessage.includes("ok")||lowerCaseMessage.includes("good")||lowerCaseMessage.includes("great")) {
             session.stage = 3;
             session.failCount = 0;
             response += `Great! If you're satisfied with ${session.restaurants.map(r => r.name).join(", ")}, I can assist you with making a reservation. Would you like to proceed with a reservation?`;
@@ -140,10 +143,10 @@ function determineResponse(message, userId) {
 
         // If no understood response was formed, provide the default message
         if (!understood) {
-            response += "I'm sorry, I didn't understand that. Please ask about price range, location, rating, opening hours, parking, or say 'go back to restaurants' or 'main menu to cuisines reselct'.";
+            response += "I'm sorry, I didn't understand that. Please ask about price range, location, rating, opening hours, parking, or contact, or say 'go back to restaurants' or 'main menu to cuisines reselct'.";
         }
     } else if (session.stage === 3) {
-        if (lowerCaseMessage.includes("yes") || lowerCaseMessage.includes("please")|| lowerCaseMessage.includes("good")|| lowerCaseMessage.includes("great")) {
+        if (lowerCaseMessage.includes("yes") || lowerCaseMessage.includes("please")|| lowerCaseMessage.includes("good")|| lowerCaseMessage.includes("great")||lowerCaseMessage.includes("ok")) {
             session.stage = 4;
             session.failCount = 0;
             response = "Excellent! How many people is the reservation for?";
@@ -156,19 +159,31 @@ function determineResponse(message, userId) {
         if (!isNaN(people) && people > 0) {
             session.reservation = { people };
             session.stage = 5;
-            response = "Great! What time today would you like to make the reservation for? (Please use 24-hour format, e.g., 18:30)";
+            response = "Great! What time today would you like to make the reservation for? (Please use AM/PM format, e.g., 6:30 PM)";
             understood = true;
         } else {
             response = "Please specify a valid number of people for the reservation.";
         }
     } else if (session.stage === 5) {
-        if (lowerCaseMessage.match(/^([01]\d|2[0-3]):([0-5]\d)$/)) {
-            session.reservation.time = lowerCaseMessage;
-            session.stage = 6;
-            response = "Got it! Do you have any allergies or dietary restrictions we should be aware of?";
-            understood = true;
+        const timeMatch = lowerCaseMessage.match(/^(1[0-2]|0?[1-9]):([0-5][0-9])\s?(AM|PM)$/i);
+        if (timeMatch) {
+            const hours = parseInt(timeMatch[1]);
+            const minutes = timeMatch[2];
+            const period = timeMatch[3].toUpperCase();
+            const reservationTime24 = convertTo24HourFormat(hours, minutes, period);
+
+            const restaurant = session.restaurants[0]; 
+
+            if (isTimeWithinOpeningHours(reservationTime24, restaurant.opening_hours)) {
+                session.reservation.time = lowerCaseMessage;
+                session.stage = 6;
+                response = "Got it! Do you have any allergies or dietary restrictions we should be aware of?";
+                understood = true;
+            } else {
+                response = `Sorry, please enter a valid time within the opening hours (${restaurant.opening_hours}). Or you can use 'go back' to the last step check the opening hours again.`;
+            }
         } else {
-            response = "Please provide a valid time for the reservation in 24-hour format (e.g., 18:30).";
+            response = "Please provide a valid time for the reservation in AM/PM format (e.g., 6:30 PM).";
         }
     } else if (session.stage === 6) {
         session.reservation.allergies = lowerCaseMessage;
@@ -178,7 +193,7 @@ function determineResponse(message, userId) {
     } else if (session.stage === 7) {
         session.reservation.name = message;
         response = `Excellent! Your reservation information is stored. Details:\nName: ${session.reservation.name}\nNumber of people: ${session.reservation.people}\nTime: ${session.reservation.time}\nAllergies: ${session.reservation.allergies}. Would you like to send the reservation information to selected restaurant to confirm reservation?`;
-        // Save the reservation to a file
+        // Save the reservation to the jason file
         fs.writeFile('reservations.json', JSON.stringify(session.reservation, null, 2), (err) => {
             if (err) {
                 console.error('Error writing reservation to file:', err);
@@ -190,7 +205,7 @@ function determineResponse(message, userId) {
         session.stage = 8; 
         understood = true;
     } else if (session.stage === 8) {
-        if (lowerCaseMessage.includes("yes") || lowerCaseMessage.includes("great") || lowerCaseMessage.includes("good") || lowerCaseMessage.includes("please")|| lowerCaseMessage.includes("ok")) {
+        if (lowerCaseMessage.includes("yes") || lowerCaseMessage.includes("great") || lowerCaseMessage.includes("good") || lowerCaseMessage.includes("please")|| lowerCaseMessage.includes("ok")||lowerCaseMessage.includes("confirm")) {
             session.stage = 0;
             response = 'Your reservation request have been sent to the selected restaurant, want else do you want to know? Or enter "main menu" to quit current session.';
             understood = true;
@@ -206,13 +221,27 @@ function determineResponse(message, userId) {
         if (session.failCount >= 3) {
             session.stage = 0;
             session.failCount = 0;
-            response = "It seems I'm having trouble understanding you. Let's start over. Which cuisine would you like to have?";
+            response = "It seems I'm having trouble understanding you. Let's start over. Which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, or American)";
         } else {
             response = "I'm sorry, I didn't understand that. Could you please rephrase?";
         }
     }
 
     return response;
+}
+
+function convertTo24HourFormat(hours, minutes, period) {
+    if (period === 'PM' && hours !== 12) {
+        hours += 12;
+    } else if (period === 'AM' && hours === 12) {
+        hours = 0;
+    }
+    return `${hours}:${minutes}`;
+}
+
+function isTimeWithinOpeningHours(time, openingHours) {
+    const [opening, closing] = openingHours.split(' - ').map(convertTo24HourFormat);
+    return time >= opening && time <= closing;
 }
 
 const port = process.env.PORT || 4000;
