@@ -1,0 +1,88 @@
+
+.input-group {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2.5em);
+    background-color: var(--chat-bg);
+    border-radius: 1.25em;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+    margin-top: 0.625em;
+    flex: 1;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 0.625em;
+    border: 0.0625em solid var(--chat-bg);
+    border-radius: 1.25em;
+    margin-right: 0.625em;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--button-color);
+    outline: none;
+}
+
+.input-group button {
+    padding: 0.625em 1.25em;
+    border: none;
+    border-radius: 1.25em;
+    background-color: var(--button-color);
+    color: var(--chat-bg);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.input-group button:hover{
+    color: var(--button-color);
+    background-color: #fff;
+    border: 0.0625em solid var(--button-color);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .input-group{
+        flex-wrap: wrap;
+        padding: 0.3125em;
+        border-radius: 0.625em;
+    }
+
+    .input-group input {
+        flex: 0 0 70%;
+        margin-bottom: 10px;
+        padding: 0.3125em;
+        border-radius: 0.625em;
+        margin-right: 0.3125em;
+    }
+
+    .input-group button {
+        flex: 0 0 28%;
+        margin-left: 2%;
+        padding: 0.3125em 0.625em;
+        border-radius: 0.625em;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    .input-group {
+        flex-direction: column;
+        padding: 0.3125em;
+        border-radius: 0.625em;
+    }
+
+    .input-group input {
+        margin-right: 0;
+        margin-bottom: 0.3125em;
+    }
+
+    .input-group button {
+        width: 100%;
+        padding: 0.3125em;
+    }
+}
+
