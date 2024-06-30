@@ -1,4 +1,4 @@
-{
+{   "continue": [],
     "bye": [
         "goodbye",
         "see you later",
@@ -306,12 +306,10 @@
         "ADA compliant"
     ],
     "bar": [
-        "do they have a bar",
-        "is there a bar",
         "bar available",
         "can I get drinks",
         "do they serve alcohol",
-        "bartender",
+        "bartender", "bar",
         "bar service",
         "does it have a bar",
         "can we order drinks",
@@ -321,7 +319,7 @@
     "lounge": [
         "do they have a lounge",
         "is there a lounge",
-        "lounge area",
+        "lounge area", "lounge", "fancy place to drink",
         "can I relax in the lounge",
         "do they have a lounge area",
         "lounge available",

@@ -68,20 +68,33 @@ async function handleMessage(message, sessionId) {
     if (!userSessions[sessionId]) {
         userSessions[sessionId] = {history: [],  stage: 0, failCount: 0, restaurantChoices: [], conversationIsLong: false};
     }
-
     let session = userSessions[sessionId];
     let restaurantData = {};
     let prevRestaurantChoices = []
 
-    let response = await determineRestaurant(message, session, restaurantData, prevRestaurantChoices);
-    if (Array.isArray(session.history)) {
-        session.history.push({ message, response });
-    } else {
-        session.history = [{ message, response }]; // Initialize it if it's not an array
+    console.log(`Session details: ${JSON.stringify(session)}`);
+
+    try {
+        let response = await determineRestaurant(message, session, restaurantData, prevRestaurantChoices);
+
+        if (Array.isArray(session.history)) {
+            session.history.push({ message, response });
+        } else {
+            session.history = [{ message, response }]; // Initialize it if it's not an array
+        }
+
+        // If chatting for too long, offer user possibility to continue
+        if (session.history.length > 50) {
+            session.conversationIsLong = true;
+            response = response + " We've been chatting for a while. Would you like to continue or start over?";
+        }
+
+        console.log(`Response: ${response}`);
+        return response;
+    } catch (error) {
+        console.error(`Error in handleMessage: ${error}`);
+        return 'Sorry, something went wrong. Please try again.';
     }
-
-    // if chatting for too long, offer user possibility to continue
-
 
 
 }
