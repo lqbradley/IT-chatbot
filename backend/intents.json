@@ -1,303 +1,384 @@
 {
-    "italian": {
-        "restaurants": [
-            {
-                "name": "Il Pozzo",
-                "price_range": "under 10 € per person",
-                "location": "City Center",
-                "rating": "3.5 stars",
-                "opening_hours": "10:00 - 22:00",
-                "parking": "Not Available",
-                "contact_method": "Call (555-1111) or visit www.ilpozzo.com",
-                "contact_details": "Phone: 555-1111, Email: contact@ilpozzo.com"
-            },
-            {
-                "name": "Restaurant San Siro",
-                "price_range": "10-20 € per person",
-                "location": "City Center",
-                "rating": "4.6 stars",
-                "opening_hours": "12:00 - 24:00",
-                "parking": "Available",
-                "contact_method": "Call (555-2222)",
-                "contact_details": "Phone: 555-2222, Email: reserve@restaurantsansiro.com"
-            },
-            {
-                "name": "Restaurant La Cantina di Simon",
-                "price_range": "10-20 € per person",
-                "location": "Midtown",
-                "rating": "4.1 stars",
-                "opening_hours": "17:00-23:00",
-                "parking": "Available",
-                "contact_method": "Call (555-3333) or visit www.lacantinadisimon.com",
-                "contact_details": "Phone: 555-3333, Email: contact@lacantinadisimon.com"
-            },
-            {
-                "name": "Pizzeria La Fontana",
-                "price_range": "10-20 € per person",
-                "location": "West Side",
-                "rating": "4.2 stars",
-                "opening_hours": "16:00 - 22:00",
-                "parking": "Not Available",
-                "contact_method": "Call (555-4444) or visit www.pizzerialafontana.com",
-                "contact_details": "Phone: 555-4444, Email: info@pizzerialafontana.com"
-            }
-        ]
-    },
-
-
-    "chinese": {
-        "restaurants": [
-            {
-                "name": "Panda Restaurant",
-                "price_range": "under 10 € per person",
-                "location": "North side",
-                "rating": "3.9 stars",
-                "opening_hours": "11:00 - 21:00",
-                "parking": "Not Available",
-                "contact_method": "Call (555-1234) or message WhatsApp: 123478910",
-                "contact_details": "Phone: 555-1234, Email: reserve@pandarestaurant.com"
-            },
-            {
-                "name": "Sichuan Hotpot",
-                "price_range": "10-20 € per person",
-                "location": "City Center",
-                "rating": "4.5 stars",
-                "opening_hours": "11:00 - 22:00",
-                "parking": "Available",
-                "contact_method": "Call (555-5678) or visit www.sichuanhotpot.com",
-                "contact_details": "Phone: 555-5678, Email: contact@sichuanhotpot.com"
-            },
-            {
-                "name": "Cantonese Dim Sum",
-                "price_range": "20-30 € per person",
-                "location": "South of city",
-                "rating": "4.2 stars",
-                "opening_hours": "12:00 - 22:30",
-                "parking": "Available",
-                "contact_method": "Call (555-9876) or visit www.cantonesedimsum.com",
-                "contact_details": "Phone: 555-9876, Email: contact@cantonesedimsum.com"
-            },
-            {
-                "name": "Lanzhou Beef Noodles",
-                "price_range": "10-20 € per person",
-                "location": "East Side",
-                "rating": "4.2 stars",
-                "opening_hours": "11:00 - 21:30",
-                "parking": "Not Available",
-                "contact_method": "Call (555-6543) or visit www.lanzhounoodles.com",
-                "contact_details": "Phone: 555-6543, Email: info@lanzhounoodles.com"
-            }
-        ]
-    },
-
-    "mexican": {
-        "restaurants": [
-            {
-                "name": "Mezzeria Milo",
-                "price_range": "20-30 € per person",
-                "location": "West Side",
-                "rating": "4.2 stars",
-                "opening_hours": "12:00 - 23:30",
-                "parking": "Available",
-                "contact_method": "Call (555-6666) or visit www.mezzeriamilo.com or message WhatsApp:66666666",
-                "contact_details": "Phone: 555-1111, Email: reserve@mezzeriamilo.com"
-            },
-            {
-                "name": "Taco Mexico",
-                "price_range": "10-20 € per person",
-                "location": "City Center",
-                "rating": "3.7 stars",
-                "opening_hours": "16:00 - 23:00",
-                "parking": "Not Available",
-                "contact_method": "Call (555-8888) or visit www.tacomexico.com",
-                "contact_details": "Phone: 555-8888, Email: reserve@tacomexico.com"
-            },
-            {
-                "name": "Restaurant Ritos",
-                "price_range": "20-30 € per person",
-                "location": "Midtown",
-                "rating": "4.2 stars",
-                "opening_hours": "11:30 - 21:30",
-                "parking": "Available",
-                "contact_method": "Call (555-9999) or visit www.ritosnew.com",
-                "contact_details": "Phone: 555-3333, Email: contact@ritosnew.com"
-            }
-        ]
-    },
-    "indian": {
-        "restaurants": [
-            {
-                "name": "Holi Indian",
-                "price_range": "10 - 20 € per person",
-                "location": "Upper Town",
-                "rating": "4.6 stars",
-                "opening_hours": "16:00 - 23:00",
-                "parking": "Available",
-                "contact_method": "Call (555-0496) or visit www.holiindian.com",
-                "contact_details": "Phone: 555-0496, Email: contact@holiindian.com"
-            },
-            {
-                "name": "Indian Food Corner",
-                "price_range": "Under 10 € per person",
-                "location": "City Center",
-                "rating": "4.1 stars",
-                "opening_hours": "15:00 - 21:00",
-                "parking": "Not Available",
-                "contact_method": "Call (555-2827) for food delivery and seat reservation",
-                "contact_details": "Phone: 555-2827, Email: info@indianfoodcorner.com"
-            },
-            {
-                "name": "Restaurant Namaska",
-                "price_range": "20-30 € per person",
-                "location": "Midtown",
-                "rating": "3.9 stars",
-                "opening_hours": "16:30 - 23:00",
-                "parking": "Available",
-                "contact_method": "Call (555-3987) or visit www.restaurantnamaska.com",
-                "contact_details": "Phone: 555-3987, Email: reserve@restaurantnamaska.com"
-            },
-            {
-                "name": "Taj Mahal",
-                "price_range": "10-20 € per person",
-                "location": "East Side",
-                "rating": "4.7 stars",
-                "opening_hours": "17:00 - 22:00",
-                "parking": "Available",
-                "contact_method": "Call (555-3456) or visit www.tajmahal.com",
-                "contact_details": "Phone: 555-3456, Email: contact@tajmahal.com"
-            }
-        ]
-    },
-    "japanese": {
-        "restaurants": [
-            {
-                "name": "Restaurant Kyushu",
-                "price_range": "20 - 30 € per person",
-                "location": "Middle Town",
-                "rating": "4.5 stars",
-                "opening_hours": "13:00 - 22:00",
-                "parking": "Available",
-                "contact_method": "Call (555-9999) or visit www.kyushusushi.com",
-                "contact_details": "Phone: 555-9999, Email: contact@kyushusushi.com"
-            },
-            {
-                "name": "Umami Asian Food Bar",
-                "price_range": "Under 10 € per person",
-                "location": "City Center",
-                "rating": "4.4 stars",
-                "opening_hours": "12:00 - 23:00",
-                "parking": "Not Available",
-                "contact_method": "Call (555-4747) for food delivery and no seat reservation required",
-                "contact_details": "Phone: 555-4747, Email: info@umamifood.com"
-            },
-            {
-                "name": "Suzi",
-                "price_range": "30-40 € per person",
-                "location": "Midtown",
-                "rating": "3.7 stars",
-                "opening_hours": "11:00 - 22:00",
-                "parking": "Available",
-                "contact_method": "Call (555-0123) or visit www.suzijapan.com",
-                "contact_details": "Phone: 555-0123, Email: reserve@suzijapan.com"
-            },
-            {
-                "name": "Sushi Koi",
-                "price_range": "10-20 € per person",
-                "location": "West Side",
-                "rating": "4.4 stars",
-                "opening_hours": "12:00 - 23:30",
-                "parking": "Not Available",
-                "contact_method": "Call (555-5858) or visit www.sushikoi.com",
-                "contact_details": "Phone: 555-5858, Email: contact@sushikoi.com"
-            }
-        ]
-    },
-    "french": {
-        "restaurants": [
-            {
-                "name": "Le Bibelot",
-                "price_range": "20 - 30 € per person",
-                "location": "Upper Town",
-                "rating": "4.3 stars",
-                "opening_hours": "17:00 - 22:00",
-                "parking": "Available",
-                "contact_method": "Call (555-6263) or visit www.lebibelot.com",
-                "contact_details": "Phone: 555-6263, Email: contact@lebibelot.com"
-            },
-            {
-                "name": "Oudaen",
-                "price_range": "20-30 € per person",
-                "location": "City Center",
-                "rating": "4.2 stars",
-                "opening_hours": "11:00 - 22:30",
-                "parking": "Available",
-                "contact_method": "Call (555-8789) or visit www.oudaenfrench.com",
-                "contact_details": "Phone: 555-8789, Email: info@oudaenfrench.com"
-            },
-            {
-                "name": "La French Cafe",
-                "price_range": "10-20 € per person",
-                "location": "Midtown",
-                "rating": "4.5 stars",
-                "opening_hours": "10:00 - 23:00",
-                "parking": "Available",
-                "contact_method": "Call (555-9695) or visit www.lafrenchcafe.com",
-                "contact_details": "Phone: 555-9695, Email: reserve@lafrenchcafe.com"
-            },
-            {
-                "name": "Brasserie Goeie Louisa",
-                "price_range": "20-30 € per person",
-                "location": "West Side",
-                "rating": "4.1 stars",
-                "opening_hours": "9:00 - 24:00",
-                "parking": " Available",
-                "contact_method": "Call (555-8183) or visit www.goeielouisa.com",
-                "contact_details": "Phone: 555-8183, Email: contact@goeielouisa.com"
-            },
-            {
-                "name": "Le Jardin",
-                "price_range": "50-100 € per person",
-                "location": "South Side",
-                "rating": "4.4 stars",
-                "opening_hours": "17:00 - 23:00",
-                "parking": " Available",
-                "contact_method": "Call (555-7479) or visit www.lejardin.com",
-                "contact_details": "Phone: 555-7479, Email: contact@lejardin.com"
-            }
-        ]
-    },
-    "american": {
-        "restaurants": [
-            {
-                "name": "New York Hamburger",
-                "price_range": "10 - 20 € per person",
-                "location": "City Center",
-                "rating": "3.5 stars",
-                "opening_hours": "10:00 - 21:30",
-                "parking": "Not Available",
-                "contact_method": "Call (555-1317) or visit www.newyorkhamburger.com",
-                "contact_details": "Phone: 555-1317, Email: contact@newyorkhamburger.com"
-            },
-            {
-                "name": "New Burger Bar",
-                "price_range": "Under 10 € per person",
-                "location": "City Center",
-                "rating": "4.1 stars",
-                "opening_hours": "10:00 - 23:30",
-                "parking": "Not Available",
-                "contact_method": "Call (555-2824) for food delivery and no seat reservation required",
-                "contact_details": "Phone: 555-2824, WhatsApp:54321098"
-            },
-            {
-                "name": "Burger Masters",
-                "price_range": "10-20 € per person",
-                "location": "South Side",
-                "rating": "3.9 stars",
-                "opening_hours": "11:00 - 22:30",
-                "parking": "Available",
-                "contact_method": "Call (555-7971) or visit www.burgermasters.com",
-                "contact_details": "Phone: 555-7971, Email: reserve@burgermasters.com"
-            }
-        ]
-    }
+    "bye": [
+        "goodbye",
+        "see you later",
+        "farewell",
+        "catch you later",
+        "have a nice day",
+        "take care",
+        "bye for now",
+        "talk to you soon",
+        "see you soon",
+        "until next time"
+    ],
+    "make_reservation": [
+        "book a table",
+        "reserve a seat",
+        "schedule a reservation",
+        "make a booking",
+        "arrange a table",
+        "reserve for dinner",
+        "book a table for two",
+        "make a reservation for tonight",
+        "schedule a booking",
+        "arrange a reservation"
+    ],
+    "$": [
+        "under $10", "$",
+        "cheap", "vv cheap",
+        "budget",
+        "inexpensive",
+        "low cost",
+        "affordable",
+        "cost-effective",
+        "economical",
+        "not pricey",
+        "value for money"
+    ],
+    "$$": [
+        "under $30", "$$",
+        "mid-range", "mid range",
+        "moderate", "comfortable",
+        "average price",
+        "moderately priced",
+        "fairly priced",
+        "reasonable",
+        "middle range",
+        "balanced cost",
+        "standard pricing"
+    ],
+    "$$$": [
+        "over $50", "$$$", "luxury",
+        "expensive",
+        "high-end",
+        "luxurious",
+        "premium",
+        "costly",
+        "pricy",
+        "top tier",
+        "high cost",
+        "splurge"
+    ],
+    "no_preference": [
+        "any cuisine", "anything",
+        "doesn't matter", "flexible",
+        "no specific choice", "egal",
+        "I don't have a preference",
+        "open to options",
+        "I'm flexible", "either",
+        "no particular type",
+        "I don't mind", "neither",
+        "I'm easy", "no preference",
+        "just anything"
+    ],
+    "yes": [
+        "sounds good",
+        "ok", "ye", "yed", "yeash", "yeah", "yep",
+        "sure", "yup","for sure", "good",
+        "absolutely"
+    ],
+    "confirm": [
+        "affirmed",
+        "indeed",
+        "that's correct",
+        "that's right",
+        "affirmative",
+        "definitely",
+        "certainly",
+        "right",
+        "indeed",
+        "that's fine"
+    ],
+    "no": [
+        "no", "nah",
+        "not needed",
+        "don't",
+        "no thanks",
+        "negative",
+        "no way",
+        "nope",
+        "not interested",
+        "I decline",
+        "not required"
+    ],
+    "vegan": [
+        "plant-based",
+        "vegan-friendly",
+        "vegan menu",
+        "plant-based diet",
+        "vegan options",
+        "animal-free", "vegan",
+        "vegan dishes"
+    ],
+    "vegetarian": [
+        "meat-free",
+        "vegetarian-friendly",
+        "vegetarian options", "vegetarian",
+        "plant-based diet",
+        "vegetarian dishes",
+        "veggie menu",
+        "vegetarian food",
+        "vegetarian-friendly options"
+    ],
+    "main": [
+        "main menu",
+        "return to beginning",
+        "cuisine selection",
+        "change cuisine",
+        "main option",
+        "back to start",
+        "start",
+        "beginning",
+        "done",
+        "home menu", "main"
+    ],
+    "back": [
+        "previous step",
+        "go back",
+        "previous question",
+        "return",
+        "back to last question",
+        "undo", "back",
+        "last step",
+        "previous menu",
+        "back to previous",
+        "reverse"
+    ],
+    "ambiance": [
+        "vibe",
+        "atmosphere",
+        "feel of the place",
+        "restaurant ambiance",
+        "dining atmosphere",
+        "mood of the restaurant",
+        "restaurant vibe",
+        "how does it feel",
+        "setting",
+        "ambiance like"
+    ],
+    "price": [
+        "cost per person",
+        "price range",
+        "how much does it cost",
+        "average price",
+        "meal pricing",
+        "price per meal",
+        "cost",
+        "pricing details",
+        "what's the price",
+        "expense"
+    ],
+    "location": [
+        "where is it located",
+        "address",
+        "location",
+        "how to get there",
+        "place",
+        "where can I find it",
+        "where is it",
+        "location details",
+        "place on the map",
+        "whereabouts"
+    ],
+    "rating": [
+        "how is it rated",
+        "customer rating",
+        "star rating",
+        "reviews",
+        "how do people rate it",
+        "restaurant rating",
+        "feedback score",
+        "rating score",
+        "what's the rating",
+        "popularity"
+    ],
+    "hours": [
+        "opening hours",
+        "when is it open",
+        "hours of operation",
+        "closing time",
+        "when do they open",
+        "business hours",
+        "operational hours",
+        "opening and closing times",
+        "availability hours",
+        "open hours"
+    ],
+    "contact": [
+        "how can they be reached",
+        "contact details",
+        "phone number",
+        "contact information",
+        "how to contact",
+        "reach them",
+        "email address",
+        "contact options",
+        "how to get in touch",
+        "how to call"
+    ],
+    "wifi": [
+        "do they have wifi",
+        "is wifi available",
+        "internet access",
+        "wireless internet",
+        "can I use wifi",
+        "wifi service",
+        "do they offer wifi",
+        "wifi connectivity",
+        "do they provide wifi",
+        "wifi availability"
+    ],
+    "indoor_seating": [
+        "do they have indoor seating",
+        "indoor dining",
+        "can I sit inside",
+        "seating inside",
+        "is indoor seating available",
+        "indoor seating",
+        "can we sit inside",
+        "heating",
+        "protection from the cold",
+        "air conditioner",
+        "ac",
+        "look at the chef"
+    ],
+    "outdoor_seating": [
+        "do they have outdoor seating",
+        "under the stars",
+        "seabreeze",
+        "fresh air",
+        "watch plants",
+        "one with nature",
+        "sunshine",
+        "insect bites",
+        "can I sit outside",
+        "seating outside",
+        "is there outdoor seating",
+        "outside seating options",
+        "is outdoor seating available",
+        "dine outside",
+        "outdoor seating availability",
+        "can we sit outside"
+    ],
+    "payment": [
+        "payment",
+        "how can I pay",
+        "do they accept",
+        "payment methods",
+        "how to pay",
+        "mobile payments",
+        "what payment types are accepted",
+        "blood",
+        "crypto",
+        "card",
+        "can i pay with",
+        "cash",
+        "applepay",
+        "nft",
+        "bitcoin",
+        "dollars", "euros", "crown", "diamond", "jewel", "ruby", "emerald", "soul"
+    ],
+    "transport": [
+        "how will you get there",
+        "transportation",
+        "how to get there",
+        "ways to reach",
+        "transport",
+        "getting there",
+        "travel options",
+        "how can I go there",
+        "means of transportation",
+        "bus", "train", "ferry", "rollerblade", "bike", "motorbike", "walk", "by feet",
+        "can i get there with",
+        "can i use"
+    ],
+    "wheelchair": [
+        "is it wheelchair accessible",
+        "accessibility",
+        "do they have wheelchair access",
+        "wheelchair friendly",
+        "can wheelchairs enter",
+        "is it accessible",
+        "wheelchair access",
+        "accessible for wheelchairs",
+        "is it handicap accessible",
+        "does it have ramps",
+        "ADA compliant"
+    ],
+    "bar": [
+        "do they have a bar",
+        "is there a bar",
+        "bar available",
+        "can I get drinks",
+        "do they serve alcohol",
+        "bartender",
+        "bar service",
+        "does it have a bar",
+        "can we order drinks",
+        "alcohol availability",
+        "bar options"
+    ],
+    "lounge": [
+        "do they have a lounge",
+        "is there a lounge",
+        "lounge area",
+        "can I relax in the lounge",
+        "do they have a lounge area",
+        "lounge available",
+        "lounge services",
+        "can we sit in the lounge",
+        "lounge seating",
+        "lounge options"
+    ],
+    "kid_friendly": [
+        "is it kid friendly",
+        "can I bring kids",
+        "suitable for children",
+        "kid-friendly restaurant",
+        "family-friendly",
+        "are kids welcome",
+        "child-friendly",
+        "kids' options",
+        "is it good for kids",
+        "can children dine"
+    ],
+    "live_music": [
+        "do they have live music",
+        "live music available",
+        "is there live music",
+        "do they play music live",
+        "music performances",
+        "live band", "live music",
+        "music nights",
+        "do they have bands",
+        "musicians performing",
+        "live music events"
+    ],
+    "catering": [
+        "do they offer catering",
+        "catering services",
+        "can they cater events",
+        "catering options",
+        "event catering",
+        "can I order catering",
+        "do they provide catering",
+        "catering availability",
+        "catering menu",
+        "catering for events"
+    ],
+    "football": [
+        "do they show football",
+        "can I watch football there",
+        "football matches on TV",
+        "live football games",
+        "football screenings",
+        "do they broadcast football",
+        "football viewing",
+        "showing football games",
+        "football on TV",
+        "watch football matches"
+    ],
+    "view": ["scenery", "sight", "outlook", "vista", "landscape", "what can you see", "what's the view like", "what's visible", "visible surroundings", "outdoor view"],
+    "sustainability": ["eco-friendly", "green practices", "environmental rating", "sustainable", "sustainability practices", "environmental impact", "eco practices", "sustainability score", "green initiatives", "eco rating"],
+    "menu highlights": ["best dishes", "recommended items", "signature dishes", "top dishes", "popular dishes", "highlighted menu items", "chef's specialties", "recommended menu items", "must-try dishes", "best things to order"]
 }

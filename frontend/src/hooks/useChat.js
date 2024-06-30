@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import debounce from 'lodash/debounce';
-import { setupSocket, sendMessageToSocket } from '../services/socket';
+import socket, { setupSocket, sendMessageToSocket } from '../services/socket';
 
 export const useChat = () => {
     const [message, setMessage] = useState('');

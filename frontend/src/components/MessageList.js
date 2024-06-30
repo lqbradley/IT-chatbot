@@ -1,4 +1,6 @@
 import React from 'react';
+import './message.css';
+import './MessageArea.css';
 
 const MessageList = ({ chatHistory, isTyping, chatContainerRef }) => {
     return (

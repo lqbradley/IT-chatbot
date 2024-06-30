@@ -2,8 +2,9 @@ import React from 'react';
 import { useChat } from '../hooks/useChat';
 import MessageList from './MessageList';
 import UserInput from './UserInput';
-import '../styles/message.css';
 import '../styles/chat.css';
+import './message.css'
+import './MessageArea.css';
 
 const ChatWrapper = () => {
     const {
@@ -16,19 +17,27 @@ const ChatWrapper = () => {
     } = useChat();
 
     return (
-        <div className="chat-wrapper">
-            <MessageList 
-                chatHistory={chatHistory} 
-                isTyping={isTyping} 
-                chatContainerRef={chatContainerRef} 
+        <div className={'chat-wrapper'}>
+            <div className={'bg'}>
+            <div className={'header'}>
+                <h1>Restaurant Suggestion Chatbot</h1>
+            </div>
+
+            <MessageList
+                chatHistory={chatHistory}
+                isTyping={isTyping}
+                chatContainerRef={chatContainerRef}
             />
-            <UserInput 
-                message={message} 
-                setMessage={setMessage} 
-                sendMessage={sendMessage} 
+            <UserInput
+                message={message}
+                setMessage={setMessage}
+                sendMessage={sendMessage}
             />
+            </div>
+
         </div>
-    );
+)
+    ;
 };
 
 export default ChatWrapper;
