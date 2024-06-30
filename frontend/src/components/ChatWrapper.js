@@ -34,7 +34,6 @@ const ChatWrapper = () => {
                 sendMessage={sendMessage}
             />
             </div>
-
         </div>
 )
     ;

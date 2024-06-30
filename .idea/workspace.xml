@@ -5,34 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8165182-e651-4273-8b5d-90140835e25d" name="Changes" comment="new backend + frontend almost responsive">
-      <change afterPath="$PROJECT_DIR$/backend/determineRestaurant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/findUniqueValues.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/questions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/restaurants.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/MessageArea.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/message.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/travel-chatbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/travel-chatbot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/intents.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/intents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/css/main.13cee73d.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/static/css/main.13cee73d.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.9e5af672.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.9e5af672.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/static/js/main.9e5af672.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/ChatWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ChatWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MessageList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UserInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useChat.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useChat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/socket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageArea.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MessageArea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UserInput.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/message.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/styles/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/message.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +111,7 @@
       <updated>1719317835868</updated>
       <workItem from="1719317836935" duration="30455000" />
       <workItem from="1719579935784" duration="1210000" />
-      <workItem from="1719658792980" duration="45275000" />
+      <workItem from="1719658792980" duration="48034000" />
     </task>
     <task id="LOCAL-00001" summary="new backend + frontend almost responsive">
       <option name="closed" value="true" />
@@ -150,7 +130,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="time format change json" />
     <MESSAGE value="new backend + frontend almost responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="new backend + frontend almost responsive" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

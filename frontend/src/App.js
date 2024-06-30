@@ -4,9 +4,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
-    <div className="App">
-      <ChatWrapper />
-    </div>
+      <div className="App"
+           style={{background: 'var(--chat-bg)'}}>
+          <ChatWrapper/>
+      </div>
   );
 }
 

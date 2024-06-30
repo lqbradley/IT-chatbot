@@ -1,17 +1,16 @@
-
 .input-group {
     display: flex;
     padding: 10px;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 2.5em);
+    width: 100%;
     background-color: var(--chat-bg);
     border-radius: 1.25em;
     box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
     margin-top: 0.625em;
-    flex: 1;
+    position: absolute;
+    bottom: 0;
 }
-
 .input-group input {
     flex: 1;
     padding: 0.625em;
