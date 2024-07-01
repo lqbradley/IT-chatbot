@@ -1,4 +1,51 @@
-{   "continue": [],
+{   "catering": [
+    "catering options",
+    "cater",
+    "menu items for catering",
+    "wedding reception",
+    "catering service",
+    "delivery to event",
+    "catering packages",
+    "customize catering menu",
+    "minimum number for catering",
+    "catering events"
+],
+    "parking": [
+        "parking available",
+        "charge for parking",
+        "number of parking spots",
+        "valet parking",
+        "street parking",
+        "handicapped parking",
+        "validate parking",
+        "parking restrictions",
+        "parking lots nearby",
+        "public transportation"
+    ],
+    "kid-friendly": [
+        "kids' menu",
+        "high chairs",
+        "booster seats",
+        "play area",
+        "family-friendly",
+        "special events for kids",
+        "child care services",
+        "customize menu for kids",
+        "safety for children",
+        "smaller portion sizes"
+    ],
+    "dog-friendly": [
+        "dogs allowed",
+        "outdoor seating for dogs",
+        "dog menu",
+        "water bowls for dogs",
+        "dog policies",
+        "dog-friendly events",
+        "dog amenities",
+        "staff managing dogs",
+        "size or breed restrictions",
+        "cleaning protocols for dogs"
+    ],
     "bye": [
         "goodbye",
         "see you later",
@@ -102,20 +149,14 @@
         "not required"
     ],
     "vegan": [
-        "plant-based",
+        "only plants",
         "vegan-friendly",
         "vegan menu",
-        "plant-based diet",
-        "vegan options",
-        "animal-free", "vegan",
-        "vegan dishes"
+        "plant-based diet", "pure plants",
+        "animal-free", "vegan"
     ],
     "vegetarian": [
-        "meat-free",
-        "vegetarian-friendly",
-        "vegetarian options", "vegetarian",
-        "plant-based diet",
-        "vegetarian dishes",
+         "vegetarian",
         "veggie menu",
         "vegetarian food",
         "vegetarian-friendly options"
@@ -140,8 +181,7 @@
         "back to last question",
         "undo", "back",
         "last step",
-        "previous menu",
-        "back to previous",
+        "previous",
         "reverse"
     ],
     "ambiance": [
@@ -168,23 +208,11 @@
         "what's the price",
         "expense"
     ],
-    "location": [
-        "where is it located",
-        "address",
-        "location",
-        "how to get there",
-        "place",
-        "where can I find it",
-        "where is it",
-        "location details",
-        "place on the map",
-        "whereabouts"
-    ],
     "rating": [
         "how is it rated",
-        "customer rating",
-        "star rating",
-        "reviews",
+        "customer rating", "experience",
+        "star rating", "opinion",
+        "reviews", "what do others think",
         "how do people rate it",
         "restaurant rating",
         "feedback score",
@@ -351,18 +379,6 @@
         "do they have bands",
         "musicians performing",
         "live music events"
-    ],
-    "catering": [
-        "do they offer catering",
-        "catering services",
-        "can they cater events",
-        "catering options",
-        "event catering",
-        "can I order catering",
-        "do they provide catering",
-        "catering availability",
-        "catering menu",
-        "catering for events"
     ],
     "football": [
         "do they show football",

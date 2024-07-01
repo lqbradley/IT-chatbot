@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8165182-e651-4273-8b5d-90140835e25d" name="Changes" comment="edit messages to display properly">
+    <list default="true" id="c8165182-e651-4273-8b5d-90140835e25d" name="Changes" comment="backend now talks to frontend!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/determineRestaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/determineRestaurant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/intents.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/intents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/reservations.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/reservations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/restaurants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Node.js.determineRestaurant.js.executor": "Run",
     "Node.js.playGround.js.executor": "Run",
     "Node.js.server.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -52,7 +55,7 @@
     "javascript.nodejs.core.library.configured.version": "18.20.3",
     "javascript.nodejs.core.library.typings.version": "18.19.39",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/libra/Downloads/ILearnSubmission (2)",
+    "last_opened_file_path": "C:/Users/libra/IdeaProjects/titanic_web_service3",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -107,7 +110,7 @@
       <updated>1719317835868</updated>
       <workItem from="1719317836935" duration="30455000" />
       <workItem from="1719579935784" duration="1210000" />
-      <workItem from="1719658792980" duration="54161000" />
+      <workItem from="1719658792980" duration="71010000" />
     </task>
     <task id="LOCAL-00001" summary="new backend + frontend almost responsive">
       <option name="closed" value="true" />
@@ -133,7 +136,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719769954722</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="backend now talks to frontend!">
+      <option name="closed" value="true" />
+      <created>1719780567904</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719780567904</updated>
+    </task>
+    <task id="LOCAL-00005" summary="backend now talks to frontend!">
+      <option name="closed" value="true" />
+      <created>1719780580275</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719780580275</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,14 +164,15 @@
     <MESSAGE value="new backend + frontend almost responsive" />
     <MESSAGE value="frontend now fully responsive" />
     <MESSAGE value="edit messages to display properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit messages to display properly" />
+    <MESSAGE value="backend now talks to frontend!" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend now talks to frontend!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/backend/determineRestaurant.js</url>
-          <line>241</line>
+          <line>221</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
