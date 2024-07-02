@@ -10,16 +10,15 @@
         "public transportation"
     ],
     "kid-friendly": [
-        "kids' menu",
+        "kids' menu", "can i bring my child",
         "high chairs", "kid-friendly",
-        "booster seats",
-        "play area", "kid-friendly",
+        "booster seats", "child",
+        "play area", "kid friendly",
         "family-friendly",
-        "special events for kids",
+        "kids", "toddler", "can i bring my baby",
         "child care services",
-        "customize menu for kids",
         "safety for children",
-        "smaller portion sizes"
+        "children", "children-friendly"
     ],
     "dog-friendly": [
         "dogs allowed",
@@ -356,24 +355,23 @@
         "can children dine"
     ],
     "live_music": [
-        "do they have live music",
+        "live music", "music", "band", "DJ",
         "live music available",
-        "is there live music",
-        "do they play music live",
+        "play music live",
         "music performances",
         "live band", "live music",
-        "music nights",
+        "music nights", "",
         "do they have bands",
-        "musicians performing",
+        "musicians performing", "djs",
         "live music events"
     ],
     "football": [
-        "do they show football",
-        "can I watch football there",
+        "football", "soccer",
+        "watch football",
         "football matches on TV",
-        "live football games",
+        "live games", "watch", "EuroCup",
         "football screenings",
-        "do they broadcast football",
+        "broadcast football",
         "football viewing",
         "showing football games",
         "football on TV",

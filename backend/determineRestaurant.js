@@ -261,6 +261,16 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
                         session.failCount = 0;
                         response = "Is there a certain view during dining you would like to have? (e.g. sea, city, garden or no preference)";
                         understood = true;
+                    } else if (intent === "payment") {
+                        session.stage = 11;
+                        session.failCount = 0;
+                        response = "Is there a certain view during dining you would like to have? (e.g. sea, city, garden or no preference)";
+                        understood = true;
+                    } else {
+                        session.stage = 10;
+                        session.failCount = 0;
+                        response = "Please provide a valid payment method";
+                        understood = true;
                     }
 
                 break;
@@ -348,6 +358,12 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
                         session.failCount = 0;
                         understood = true;
                     }
+                } else {
+                    // redo this step if user doesn't understand question
+                    response = "Please answer this question with yes or no";
+                    session.stage = 15;
+                    session.failCount = 0;
+                    understood = true;
                 }
                 break;
             case 16:
