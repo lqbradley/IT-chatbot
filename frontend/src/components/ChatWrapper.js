@@ -2,7 +2,7 @@ import React from 'react';
 import { useChat } from '../hooks/useChat';
 import MessageList from './MessageList';
 import UserInput from './UserInput';
-import '../styles/chat.css';
+import './chat.css';
 import './message.css'
 import './MessageArea.css';
 
