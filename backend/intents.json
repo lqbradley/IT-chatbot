@@ -3,11 +3,24 @@
     "cater", "catering",
     "menu items for catering",
     "delivery to event",
-    "catering events"
+    "catering events", "party food",
+    "party catering"
 ],
     "parking": [
-        "parking", "car",
-        "public transportation"
+        "parking", "car", "parking available",
+        "where to park", "car park", "nearby parking",
+        "street parking", "can i park",
+        "public transportation",  "how will you get there",
+        "transportation",
+        "how to get there",
+        "ways to reach",
+        "transport",
+        "getting there",
+        "travel options",
+        "how can I go there",
+        "means of transportation",
+        "bus", "train", "ferry", "rollerblade", "bike", "motorbike", "walk", "by feet",
+        "can i get there with"
     ],
     "kid-friendly": [
         "kids' menu", "can i bring my child",
@@ -17,17 +30,18 @@
         "family-friendly",
         "kids", "toddler", "can i bring my baby",
         "child care services",
-        "safety for children",
+        "safety for children", "can i bring kids",
+        "can children dine", "are kids welcome",
         "children", "children-friendly"
     ],
     "dog-friendly": [
-        "dogs allowed",
+        "dogs allowed", "dog", "pet dog",
         "outdoor seating for dogs",
         "dog menu", "dog-friendly",
         "water bowls for dogs",
-        "dog policies",
-        "dog-friendly",
-        "dog amenities",
+        "dog policies", "dog friendly",
+        "dog-friendly", "pet friendly",
+        "dog amenities", "pet-friendly",
         "staff managing dogs",
         "size or breed restrictions",
         "cleaning protocols for dogs"
@@ -218,18 +232,6 @@
         "availability hours",
         "open hours"
     ],
-    "contact": [
-        "how can they be reached",
-        "contact details",
-        "phone number",
-        "contact information",
-        "how to contact",
-        "reach them",
-        "email address",
-        "contact options",
-        "how to get in touch",
-        "how to call"
-    ],
     "wifi": [
         "do they have wifi",
         "is wifi available",
@@ -291,20 +293,6 @@
         "nft",
         "bitcoin",
         "dollars", "euros", "crown", "diamond", "jewel", "ruby", "emerald", "soul"
-    ],
-    "transport": [
-        "how will you get there",
-        "transportation",
-        "how to get there",
-        "ways to reach",
-        "transport",
-        "getting there",
-        "travel options",
-        "how can I go there",
-        "means of transportation",
-        "bus", "train", "ferry", "rollerblade", "bike", "motorbike", "walk", "by feet",
-        "can i get there with",
-        "can i use"
     ],
     "wheelchair": [
         "is it wheelchair accessible",
