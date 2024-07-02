@@ -82,8 +82,8 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
 
 
 
-        console.log(`Current failcount is ${session.failCount}`)
-        console.log(`Current Stage is ${session.stage}`)
+       console.log(session.restaurantData)
+
         switch (session.stage) {
             case 0:
                     const cuisineChoices = uniqueVals.cuisine
@@ -353,8 +353,9 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
                         understood = true;
                     } else {
                         // if no restaurants exist, start over from the beginning
-                        response = "It looks like there are no restaurants that meet your requirements at this time. \n Let's start over. What cuisine would you like to have (Italian, Chinese, Mexican, Japanese, Indian, American or Korean)";
-                        session.stage = 0;
+                        session.restaurantChoices = [{name: "The Classic Diner", opening_hours: "17:00 - 23:00"}]
+                        response = `Sounds good. We recommend ${session.restaurantChoices[0].name}. Would you like to proceed with a reservation?`
+                        session.stage = 19;
                         session.failCount = 0;
                         understood = true;
                     }
@@ -483,7 +484,8 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
                     session.failCount = 0;
                     response = "Please enter any allergies or dietary restrictions you would like the restaurant to be aware of"
                     understood = true;
-                } else {
+                } else if (intent === "no") {
+                    session.reservation.allergies = "none";
                     session.stage = 25;
                     session.failCount = 0;
                     response = "Thank you! Can I have your name for the reservation?";

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8165182-e651-4273-8b5d-90140835e25d" name="Changes" comment="updated intents.json">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ChatWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ChatWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/blurry lights.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/blurry restaurant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/citrus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/citrus.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/wood.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/determineRestaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/determineRestaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/reservations.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/reservations.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,7 @@
     "javascript.nodejs.core.library.configured.version": "18.20.3",
     "javascript.nodejs.core.library.typings.version": "18.19.39",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/libra/IdeaProjects/titanic_web_service3",
+    "last_opened_file_path": "C:/Users/libra/IdeaProjects/travel-chatbot",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -110,7 +107,8 @@
       <updated>1719317835868</updated>
       <workItem from="1719317836935" duration="30455000" />
       <workItem from="1719579935784" duration="1210000" />
-      <workItem from="1719658792980" duration="76498000" />
+      <workItem from="1719658792980" duration="78073000" />
+      <workItem from="1719929350649" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="new backend + frontend almost responsive">
       <option name="closed" value="true" />
@@ -192,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719926483904</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated intents.json">
+      <option name="closed" value="true" />
+      <created>1719926548308</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719926548308</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +221,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/backend/determineRestaurant.js</url>
           <line>221</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
