@@ -359,11 +359,13 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
                         understood = true;
                     }
                 } else {
-                    // redo this step if user doesn't understand question
-                    response = "Please answer this question with yes or no";
-                    session.stage = 15;
-                    session.failCount = 0;
-                    understood = true;
+                    if (session.failCount === 0) {
+                        // redo this step if user doesn't understand question
+                        response = "Please answer this question with yes or no";
+                        session.stage = 15;
+                        session.failCount = 0;
+                        understood = true;
+                    }
                 }
                 break;
             case 16:

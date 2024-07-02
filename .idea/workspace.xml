@@ -7,7 +7,6 @@
     <list default="true" id="c8165182-e651-4273-8b5d-90140835e25d" name="Changes" comment="updated intents.json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/determineRestaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/determineRestaurant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/intents.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/intents.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <updated>1719317835868</updated>
       <workItem from="1719317836935" duration="30455000" />
       <workItem from="1719579935784" duration="1210000" />
-      <workItem from="1719658792980" duration="74419000" />
+      <workItem from="1719658792980" duration="75442000" />
     </task>
     <task id="LOCAL-00001" summary="new backend + frontend almost responsive">
       <option name="closed" value="true" />
@@ -165,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719919943545</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="updated intents.json">
+      <option name="closed" value="true" />
+      <created>1719924430126</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719924430127</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
