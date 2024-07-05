@@ -267,10 +267,13 @@ async function determineRestaurant(message, session, prevRestaurantChoices) {
                         response = "Is there a certain view during dining you would like to have? (e.g. sea, city, garden or no preference)";
                         understood = true;
                     } else {
-                        session.stage = 10;
-                        session.failCount = 0;
-                        response = "Please provide a valid payment method";
-                        understood = true;
+                        if (session.failCount === 0) {
+                            // redo this step if user doesn't understand question
+                            response = "Please provide a valid payment method";
+                            session.stage = 10;
+                            session.failCount = 0;
+                            understood = true;
+                        }
                     }
 
                 break;
