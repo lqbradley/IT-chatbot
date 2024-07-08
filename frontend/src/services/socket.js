@@ -1,7 +1,9 @@
 const io = require('socket.io-client');
 
 // const socket = io('https://restaurantchatbot.azurewebsites.net');
-const socket = io('http://localhost:4000')
+const socket = io('https://localhost:4000' ,{
+    rejectUnauthorized: false
+})
 
 export const setupSocket = (setChatHistory, setIsTyping) => {
     socket.on('message', data => {
@@ -24,3 +26,4 @@ export const sendMessageToSocket = (message) => {
 };
 
 export default socket;
+

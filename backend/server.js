@@ -1,20 +1,30 @@
 const express = require('express');
-const http = require('http');
+const https = require('https');
 const socketIo = require('socket.io');
 const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
 
-
 const app = express();
-const server = http.createServer(app);
-const io = socketIo(server, {
+
+const privateKey = fs.readFileSync(path.join(__dirname, 'certificates', 'chatbotrestaurant.key'), 'utf8');
+const certificate = fs.readFileSync(path.join(__dirname, 'certificates', 'chatbotrestaurant.crt'), 'utf8');
+
+
+
+const credentials = {
+    key: privateKey,
+    cert: certificate
+};
+
+const httpsServer = https.createServer(credentials, app);
+const io = socketIo(httpsServer, {
     cors: {
-        origin: "*", 
+        origin: "*",
         methods: ["GET", "POST"]
     }
 });
-const determineRestaurant = require( "./determineRestaurant");
+const determineRestaurant = require("./determineRestaurant");
 
 app.use(cors());
 
@@ -32,12 +42,10 @@ app.get('/api', (req, res) => {
     res.send('API is running...');
 });
 
-// All other GET requests not handled before will return the React 
+// All other GET requests not handled before will return the React
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
-
-
 
 const userSessions = {};
 
@@ -45,32 +53,35 @@ io.on('connection', (socket) => {
     const userId = socket.id;
     console.log(`New client connected: ${userId}`);
     userSessions[userId] = { stage: 0, failCount: 0 };
-    socket.emit('message', { userId, type: 'bot', name: 'System', text: `Welcome! I am a restaurant suggestion bot. I can give you advice and make reservations for restaurants in ExampleTown.
-            Firstly, which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, American or Korean). 
-            At any point in this conversation, you can enter "main menu" to start over. ` });
+    socket.emit('message', {
+        userId,
+        type: 'bot',
+        name: 'System',
+        text: `Welcome! I am a restaurant suggestion bot. I can give you advice and make reservations for restaurants in ExampleTown.
+            Firstly, which cuisine would you like to have? (Italian, Chinese, Mexican, Japanese, Indian, American or Korean).
+            At any point in this conversation, you can enter "main menu" to start over.`
+    });
 
     socket.on('disconnect', () => {
         console.log(`Client disconnected: ${userId}`);
         delete userSessions[userId];
-        socket.removeAllListeners(); 
+        socket.removeAllListeners();
     });
 
     socket.on('userMessage', async (data) => {
         console.log(`Received message from ${userId}: ${data.message}`);
         const response = await handleMessage(data.message, userId);
         console.log(`Sending response to ${userId}: ${response}`);
-        socket.emit('message', {userId, type: 'bot', name: 'System', text: response});
+        socket.emit('message', { userId, type: 'bot', name: 'System', text: response });
     });
 });
 
 async function handleMessage(message, sessionId) {
-
     if (!userSessions[sessionId]) {
-        userSessions[sessionId] = {history: [],  stage: 0, failCount: 0, restaurantChoices: [], additionalRequirement: '', chosenRestaurant:'', restaurantData: {}, reservation:{}};
+        userSessions[sessionId] = { history: [], stage: 0, failCount: 0, restaurantChoices: [], additionalRequirement: '', chosenRestaurant: '', restaurantData: {}, reservation: {} };
     }
     let session = userSessions[sessionId];
-    let prevRestaurantChoices = []
-
+    let prevRestaurantChoices = session.restaurantChoices;
 
     try {
         let response = await determineRestaurant(message, session, prevRestaurantChoices);
@@ -86,12 +97,7 @@ async function handleMessage(message, sessionId) {
         console.error(`Error in handleMessage: ${error}`);
         return 'Sorry, something went wrong. Please try again.';
     }
-
-
 }
 
-
-
 const port = process.env.PORT || 4000;
-server.listen(port, () => console.log(`Listening on port ${port}`));
-
+httpsServer.listen(port, () => console.log(`Listening on port ${port}`));
